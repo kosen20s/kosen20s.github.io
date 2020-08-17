@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  padding: 16px 32px;
+  background-color: #ddd;
+}
+.headerLeftBlock {
+  margin: 0;
+  margin-right: auto;
+}
+.headerRightBlock {
+  margin: 0;
+  margin-left: auto;
+}
+main {
+  padding: 0 64px;
+}
