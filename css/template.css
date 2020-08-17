@@ -5,6 +5,19 @@ body {
     flex-direction: column;
     font-family: sans-serif;
 }
+header {
+  display: flex;
+  padding: 16px 32px;
+  background-color: #ddd;
+}
+.headerLeftBlock {
+  margin: 0;
+  margin-right: auto;
+}
+.headerRightBlock {
+  margin: 0;
+  margin-left: auto;
+}
 footer {
     margin: auto 0 0;
     padding: 4px 32px;
@@ -17,4 +30,7 @@ footer {
     width: auto;
     color: #444;
     text-align: center;
+}
+main {
+  padding: 0 64px;
 }
