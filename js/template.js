@@ -1,15 +1,37 @@
 (() => {
 
+    const header = (() => {
+
+        const siteTitleText = 'Kosen20sのウェブサイト'
+
+        const element = document.createElement('header');
+        const headerLeftBlock = document.createElement('div');
+        const headerRightBlock = document.createElement('div');
+        const siteTitle = document.createElement('h1');
+        const rightPositionElement = document.createElement('a');
+        headerLeftBlock.classList.add('headerLeftBlock');
+        headerRightBlock.classList.add('headerRightBlock');
+        rightPositionElement.classList.add('openInNewTab');
+        siteTitle.innerText = siteTitleText;
+        rightPositionElement.href = 'https://github.com/kosen20s/kosen20s.github.io';
+        rightPositionElement.innerText = 'ソースコード';
+        headerLeftBlock.appendChild(siteTitle);
+        headerRightBlock.appendChild(rightPositionElement);
+        element.appendChild(headerLeftBlock);
+        element.appendChild(headerRightBlock);
+        return element
+    })();
+
     const footer = (() => {
 
         const copyrightText = '(c) Kosen20s';
 
         const element = document.createElement('footer');
         const footerCenterBlock = document.createElement('div');
-        footerCenterBlock.classList.add('footerCenterBlock');
         const copyright = document.createElement('p');
+        footerCenterBlock.classList.add('footerCenterBlock');
         copyright.classList.add('footerCopyright');
-        copyright.appendChild(document.createTextNode(copyrightText));
+        copyright.innerText = copyrightText;
         footerCenterBlock.appendChild(copyright);
         element.appendChild(footerCenterBlock);
         return element
@@ -41,6 +63,7 @@
         document.head.appendChild(element);
     };
 
+    document.body.prepend(header);
     document.body.appendChild(footer);
 
     for (const element of document.getElementsByTagName('a')) {
