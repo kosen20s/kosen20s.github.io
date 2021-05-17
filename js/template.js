@@ -51,17 +51,17 @@
         return element
     };
 
-    for (const element of [
-        createMetaWithPC('og:url', 'https://kosen20s.github.io/'),
-        createMetaWithPC('og:type', 'website'),
-        createMetaWithPC('og:title', document.title),
-        createMetaWithPC('og:description', 'Kosen20sのページです'),
-        createMetaWithPC('og:site_name', 'Kosen20s\' WebSite'),
-        createMetaWithPC('og:image', 'https://hoge.com/fuga.png'),
-        createMetaWithNC('twitter:card', 'summary')
-    ]) {
-        document.head.appendChild(element);
-    };
+    // for (const element of [
+    //     createMetaWithPC('og:url', 'https://kosen20s.github.io/'),
+    //     createMetaWithPC('og:type', 'website'),
+    //     createMetaWithPC('og:title', document.title),
+    //     createMetaWithPC('og:description', 'Kosen20sのページです'),
+    //     createMetaWithPC('og:site_name', 'Kosen20s\' WebSite'),
+    //     createMetaWithPC('og:image', 'https://hoge.com/fuga.png'),
+    //     createMetaWithNC('twitter:card', 'summary')
+    // ]) {
+    //     document.head.appendChild(element);
+    // };
 
     document.body.prepend(header);
     document.body.appendChild(footer);
